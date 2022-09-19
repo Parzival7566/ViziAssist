@@ -1,0 +1,33 @@
+# Checking if Camera is available
+#!ls - ltrh / dev / video *
+# Creating the camera object
+import CSICamera
+from jetcam.csi_camera :
+
+
+camera = CSICamera(width=224, height=224, capture_device=0)  # confirm the capture_device number
+# Image Capture for testing
+image = camera.read()
+
+print(image.shape)
+print(camera.value.shape)
+# Wigit to view image stream
+import ipywidgets
+from IPython.display import display
+from jetcam.utils import bgr8_to_jpeg
+
+image_widget = ipywidgets.Image(format='jpeg')
+
+image_widget.value = bgr8_to_jpeg(image)
+
+display(image_widget)
+# Display the livestream
+camera.running = True
+
+
+def update_image(change):
+    image = change['new']
+    image_widget.value = bgr8_to_jpeg(image)
+
+
+camera.observe(update_image, names='value')
