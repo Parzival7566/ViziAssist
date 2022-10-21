@@ -8,11 +8,11 @@ ViziAssist, a smart attachment device that uses cameras to detect objects/hurdle
 Below, is the **NVIDIA Jetson Nano**; the GPU that we will be using for training, testing and validating our data.
 ![Jetson Nano](https://developer.nvidia.com/sites/default/files/akamai/embedded/images/jetsonNano/JetsonNano-DevKit_Front-Top_Right_trimmed.jpg)
 ## How it Works
-For this project, we have made use of the jetson-inference repository, created by NVIDIA.
+For this project, we have made use of the jetson-inference repository, created by NVIDIA. 
 Our project is essentially an Object Detection, Computer Vision Problem. So, for this purpose, we have made use of the **MobileNet-SSD-v2**, pretrained on 91 classes of the **MS-COCO** Dataset.
 
 ![Mobilenet-ssd-v2](https://pytorch.org/assets/images/ssd_diagram.png)
 
 We have uploaded all of our files and directories that we used in our project to this Repository
-Primarily, our detections happen through the **detection.py** script in the build/aarch/bin directory
+Primarily, our detections happen through the **detection.py** script.
 
