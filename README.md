@@ -5,15 +5,18 @@ A survey on vision impediments in the population of India found that nearly **40
 ViziAssist, a smart attachment device that uses cameras to detect objects/hurdles in the path of the automobile. This project is different than the existing technologies for a few reasons; it contains an on-board GPU that does extremely fast, real-time processing and the GPU will be trained through machine learning techniques for efficient obstacle detection. This will prove to be a valuable asset in the automation of the automobile sector and can help people with a minor extent of vision defects to drive safely on the road.
 
 
-Below, is the **NVIDIA Jetson Nano**; the GPU that we will be using for training, testing and validating our data.
+Below, is the **NVIDIA Jetson Nano**; the GPU used for training, testing and validating the data.
 ![Jetson Nano](https://developer.nvidia.com/sites/default/files/akamai/embedded/images/jetsonNano/JetsonNano-DevKit_Front-Top_Right_trimmed.jpg)
 ## How it Works
-For this project, we have made use of the jetson-inference repository, created by NVIDIA. 
-Our project is essentially an Object Detection, Computer Vision Problem. So, for this purpose, we have made use of the **MobileNet-SSD-v2**, pretrained on 91 classes of the **MS-COCO** Dataset.
+For this project, imprtant data, lbraries and overall steup of the Jetson Nano can be obtained from the jetson-inference repository(https://github.com/dusty-nv/jetson-inference), created by NVIDIA. 
+The project is essentially an Object Detection, Computer Vision Problem. So, for this purpose, the **MobileNet-SSD-v2** model, pretrained on 91 classes of the **MS-COCO** Dataset, will be used.
 
 ![Mobilenet-ssd-v2](https://pytorch.org/assets/images/ssd_diagram.png)
 
-We have uploaded all of our files and directories that we used in our project to this Repository
-Primarily, our detections happen through the **detection.py** script.
+All of files and directories that we used in the project have been uploaded to this Repository
+Primarily, the detections happen through the **detection.py** script.
 
-We have also added a script that can check the temperature of the CPU and GPU at all time.
+Also added a script that can check the temperature of the CPU and GPU at all time.
+##Alpha Testing
+Below is a brief look at the algorithm doing real-time object detection based on data obtained from the roads of Chandigarh City
+![Gif](https://drive.google.com/file/d/1qD35UGm08O8Fm20BuIoFsrs-VmDMZJVN/view?usp=sharing)
