@@ -16,3 +16,4 @@ Our project is essentially an Object Detection, Computer Vision Problem. So, for
 We have uploaded all of our files and directories that we used in our project to this Repository
 Primarily, our detections happen through the **detection.py** script.
 
+We have also added a script that can check the temperature of the CPU and GPU at all time.
