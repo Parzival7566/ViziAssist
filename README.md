@@ -6,6 +6,6 @@ ViziAssist, a smart attachment device that uses cameras to detect objects/hurdle
 ![Jetson Nano]([https://www.google.com/url?sa=i&url=https%3A%2F%2Fdeveloper.nvidia.com%2Fembedded%2Fjetson-nano-developer-kit&psig=AOvVaw3XMVDrJkctCYnnSJceY0bx&ust=1666417799896000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCLjAyZ_Q8PoCFQAAAAAdAAAAABAF](https://developer.nvidia.com/sites/default/files/akamai/embedded/images/jetsonNano/JetsonNano-DevKit_Front-Top_Right_trimmed.jpg))
 ## How it Works
 For this project, we have made use of the jetson-inference repository, created by NVIDIA. This is the modified version, suited for our project.
-'''
+```
 git clone https://github.com/Parzival7566/jetson-inference-for-viziassist-
-'''
+```
