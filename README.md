@@ -19,4 +19,5 @@ Primarily, the detections happen through the **detection.py** script.
 Also added a script that can check the temperature of the CPU and GPU at all time.
 ## Alpha Testing
 Below is a brief look at the algorithm doing real-time object detection based on data obtained from the roads of Chandigarh City
+
 ![Gif](https://github.com/Parzival7566/ViziAssist/blob/main/data/ezgif.com-gif-maker.gif)
