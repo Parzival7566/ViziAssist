@@ -29,3 +29,9 @@ The algorithm has also been tested on the same dataset using the **cityscapes im
 And using the **monodepth cityscapes dataset**
 
 ![Gif](https://github.com/Parzival7566/ViziAssist/blob/main/data/ezgif.com-gif-maker.gif)
+
+## Current Status
+
+Currently, the product is still in the developmental stage. In the near future, the product will be made more compact and aesthetic, so as to seamlessly blend with the interiors of any automobile.
+
+![Current_Stage](https://github.com/Parzival7566/ViziAssist/blob/main/data/IMG_20221013_221840.jpg)
