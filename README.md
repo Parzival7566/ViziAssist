@@ -18,6 +18,14 @@ Primarily, the detections happen through the **detection.py** script.
 
 Also added a script that can check the temperature of the CPU and GPU at all time.
 ## Alpha Testing
-Below is a brief look at the algorithm doing real-time object detection based on data obtained from the roads of Chandigarh City
+Below is a brief look at the algorithm doing real-time object detection based on data obtained from the roads of Chandigarh City (obtained from https://sites.google.com/view/ird-dataset/home)
+
+![Gif](https://github.com/Parzival7566/ViziAssist/blob/main/data/ezgif.com-gif-maker (2).gif)
+
+The algorithm has also been tested on the same dataset using the **cityscapes image segmentation dataset**
+
+![Gif](https://github.com/Parzival7566/ViziAssist/blob/main/data/ezgif.com-gif-maker (1).gif)
+
+And using the **monodepth cityscapes dataset**
 
 ![Gif](https://github.com/Parzival7566/ViziAssist/blob/main/data/ezgif.com-gif-maker.gif)
