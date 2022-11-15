@@ -34,6 +34,8 @@ And using the **monodepth cityscapes dataset**
 
 Currently, the product is still in the developmental stage. In the near future, the product will be made more compact and aesthetic, so as to seamlessly blend with the interiors of any automobile.
 
-**Update** : The device is currently able to correctly present outut through LEDs
-
 ![Current_Stage](https://github.com/Parzival7566/ViziAssist/blob/main/data/IMG_20221115_224935.jpg)
+
+**Update** : The device is currently able to correctly present output through LEDs. The real time result of the algorithm can be seen below : 
+
+![Current_Stage_gif](https://github.com/Parzival7566/ViziAssist/blob/main/data/ViziAssist_pdt.gif)
