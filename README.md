@@ -36,4 +36,4 @@ Currently, the product is still in the developmental stage. In the near future, 
 
 **Update** : The device is currently able to correctly present outut through LEDs
 
-![Current_Stage](https://github.com/Parzival7566/ViziAssist/blob/main/data/IMG_20221112_140834.jpg)
+![Current_Stage](https://github.com/Parzival7566/ViziAssist/blob/main/data/IMG_20221115_224935.jpg)
