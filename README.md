@@ -39,3 +39,7 @@ Currently, the product is still in the developmental stage. In the near future, 
 **Update** : The device is currently able to correctly present output through LEDs. The real time result of the algorithm can be seen below : 
 
 ![Current_Stage_gif](https://github.com/Parzival7566/ViziAssist/blob/main/data/ViziAssist_pdt.gif)
+
+The device has also been successfully deployed in an automobile as seen below :
+
+![Car_jetson](https://github.com/Parzival7566/ViziAssist/blob/main/data/20221119_120611.jpg)
