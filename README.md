@@ -6,19 +6,19 @@ ViziAssist, a smart attachment device that uses cameras to detect objects/hurdle
 
 
 Below, is the **NVIDIA Jetson Nano**; the GPU used for training, testing and validating the data.
-![Jetson Nano](https://developer.nvidia.com/sites/default/files/akamai/embedded/images/jetsonNano/JetsonNano-DevKit_Front-Top_Right_trimmed.jpg)
+<img src="https://github.com/Parzival7566/ViziAssist/blob/main/data/Jetson_Nano.jpg" align="center" width="500" height="375">
 ## How it Works
-For this project, imprtant data, lbraries and overall steup of the Jetson Nano can be obtained from the jetson-inference repository(https://github.com/dusty-nv/jetson-inference), created by NVIDIA. 
+For this project, imprtant data, lbraries and overall steup of the Jetson Nano can be obtained from the [jetson-inference repository](https://github.com/dusty-nv/jetson-inference), created by NVIDIA. 
 The project is essentially an Object Detection, Computer Vision Problem. So, for this purpose, the **MobileNet-SSD-v2** model, pretrained on 91 classes of the **MS-COCO** Dataset, will be used.
 
-![Mobilenet-ssd-v2](https://pytorch.org/assets/images/ssd_diagram.png)
+<img src="https://pytorch.org/assets/images/ssd_diagram.png" align="center" width="600" height="300">
 
 All of files and directories that we used in the project have been uploaded to this Repository
 Primarily, the detections happen through the **detection.py** script.
 
 Also added a script that can check the temperature of the CPU and GPU at all time.
 ## Alpha Testing
-Below is a brief look at the algorithm doing real-time object detection based on data obtained from the roads of Chandigarh City (obtained from : https://sites.google.com/view/ird-dataset/home)
+Below is a brief look at the algorithm doing real-time object detection based on data obtained from the roads of [Chandigarh City](https://sites.google.com/view/ird-dataset/home)
 
 ![Gif](https://github.com/Parzival7566/ViziAssist/blob/main/data/ezgif.com-gif-maker%20(2).gif)
 
@@ -32,14 +32,35 @@ And using the **monodepth cityscapes dataset**
 
 ## Current Status
 
-Currently, the product is still in the developmental stage. In the near future, the product will be made more compact and aesthetic, so as to seamlessly blend with the interiors of any automobile.
+The device has been successfully deployed in an automobile as seen below :
 
-![Current_Stage](https://github.com/Parzival7566/ViziAssist/blob/main/data/IMG_20221115_224935.jpg)
+<img src="https://github.com/Parzival7566/ViziAssist/blob/main/data/ViziAssist_Deployment.jpg" align="center" width="500" height="300">
 
 **Update** : The device is currently able to correctly present output through LEDs. The real time result of the algorithm can be seen below : 
 
 ![Current_Stage_gif](https://github.com/Parzival7566/ViziAssist/blob/main/data/ViziAssist_pdt.gif)
 
-The device has also been successfully deployed in an automobile as seen below :
+The device is now in a compact form, with 3D-printed casing : 
 
-![Car_jetson](https://github.com/Parzival7566/ViziAssist/blob/main/data/20221119_120611.jpg)
+<img src="https://github.com/Parzival7566/ViziAssist/blob/main/data/ViziAssist_Final.jpg" align="center" width="300" height="400">
+
+## Implementation Process
+
+**Step 1** : Start by setting up the OS for the Jetson Nano. The process for doing the same can be seen at [Jetson SDK](https://developer.nvidia.com/embedded/jetpack-sdk-462)
+
+**Step 2** : After setting up the device, clone the offcial NVIDIA jetson repository 
+```
+git clone https://github.com/dusty-nv/jetson-inference
+```
+**Step 3** : Follow the steps specified in the repository for performing [Object Detection](https://github.com/Parzival7566/jetson-inference-for-viziassist-/blob/master/docs/detectnet-console-2.md)
+
+**Step 4** : In order to perform our object detection, we will be using the MobileNet SSD Inception v2, as mentioned earlier. So, while the process to implement remains the same, we shall be making small changes to the [detectnet.py](https://github.com/Parzival7566/ViziAssist/blob/main/detectnet.py), that is located in the [Jetson Inference](https://github.com/Parzival7566/jetson-inference-for-viziassist-/blob/master/python/examples/my-detection.py)
+
+**Step 5** : To make our device provide real-time output, we attach LEDs to the GPIO pins **11,16,29,31,32** using the appropriate wiring. To use these we will need to run
+```
+sudo pip3 install Jetson.GPIO
+```
+**Step 6** : We now attach the raspberry pi camera to the slot and run the detection using 
+```
+./detectnet.py --network=ssd-mobilenet-v2 --threshold=0.50 csi://0
+```
